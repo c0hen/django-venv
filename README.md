@@ -24,6 +24,8 @@ or pip install django~=1.10.4 for version matching
 
 Postgresql backend, basic django site:
 
+pip install psycopg2
+
 django-admin startproject dlog
 
 su psql

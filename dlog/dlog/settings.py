@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'dlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dlog',
+        'NAME': 'dlog_db',
         'USER': 'dlog',
         'PASSWORD' : os.environ['DBPASS'],
         'HOST': 'localhost',
