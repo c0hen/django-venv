@@ -25,8 +25,9 @@ or pip install django~=1.10.4 for version matching
 Postgresql backend, basic django site:
 
 pip install psycopg2
-
 django-admin startproject dlog
+
+Not in venv:
 
 su psql
 
@@ -40,12 +41,23 @@ ALTER USER dlog WITH ENCRYPTED PASSWORD 'bbb';
 
 \q
 
-Check settings.py in site dir.
+Make sure to check settings.py in site dir.
 Password as bash environment var DBPASS.
 
+In venv:
 
 Populate db:
 python manage.py migrate
 
 Start server:
 python manage.py runserver
+
+Start app (dlog/settings.py to use it):
+python manage.py startapp blog
+
+Add model (class) Post in blog/models.py and make django aware of it:
+python manage.py makemigrations blog
+Import Post to admin by editing blog/admin.py
+
+Create superuser:
+python manage.py createsuperuser
